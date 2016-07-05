@@ -1,0 +1,133 @@
+@import 'colours';
+@import 'mixins';
+
+.page {
+	bottom: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	.header {
+		//box-shadow: 0 5px rgba(0, 0, 0, 0.05);
+		display: flex;
+		flex-flow: row nowrap;
+		//z-index: 1;
+
+		a {
+			flex: 1 1 33%;
+			padding: 10px;
+
+			@include width(400px) {
+				padding: 15px;
+			}
+			@include width(800px) {
+				padding: 20px;
+			}
+
+			&.batch {
+				background-color: $dark_blue;
+			}
+			&.order {
+				background-color: $light_purple;
+			}
+			&.courier {
+				background-color: $yellow;
+			}
+
+			h4 {
+				color: rgba(255, 255, 255, 0.7);
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+			h1 {
+				color: #fff;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+		}
+	}
+	.products {
+		background: rgba(0, 0, 0, 0.05);
+		display: flex;
+		flex: 1 1 auto;
+		flex-flow: column nowrap;
+
+		@include width(800px) {
+			//overflow-y: scroll;
+		}
+
+		.product {
+			background: #fff;
+			display: flex;
+			flex-flow: row nowrap;
+			margin-top: 10px;
+
+			&:last-child {
+				margin-bottom: 10px;
+			}
+
+			.image {
+				flex: 0 0 70px;
+				padding: 10px;
+
+				@include width(400px) {
+					flex: 0 0 95px;
+				}
+
+				img {
+					float: left;
+					width: 100%;
+				}
+			}
+			.titles {
+				display: flex;
+				flex: 1 1 auto;
+				flex-flow: column nowrap;
+				justify-content: center;
+				padding: 10px 10px 10px 0;
+
+				h4 {
+					color: rgba(0, 0, 0, 0.87);
+					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				}
+				h5 {
+					color: rgba(0, 0, 0, 0.54);
+					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+					margin-top: 5px;
+				}
+			}
+			.quantity {
+				align-items: center;
+				background-color: $dark_green;
+				display: flex;
+				flex: 0 1 auto;
+				flex-flow: column nowrap;
+				justify-content: center;
+				padding: 10px;
+
+				h3 {
+					color: #fff;
+					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+					white-space: nowrap;
+
+					.divider {
+						color: rgba(255, 255, 255, 0.7);
+
+						@include width(400px) {
+							display: none;
+						}
+					}
+					.of {
+						color: rgba(255, 255, 255, 0.7);
+						display: none;
+
+						@include width(400px) {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
