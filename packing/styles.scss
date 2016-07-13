@@ -57,14 +57,14 @@
 		flex: 1 1 auto;
 		flex-flow: column nowrap;
 		overflow-y: auto;
+		padding-bottom: 10px;
 
 		.product {
 			background: #fff;
-			border: 5px solid #fff;
 			display: flex;
 			flex-flow: row nowrap;
 			margin-top: 10px;
-			padding: 5px;
+			padding: 10px;
 
 			&:last-child {
 				border-bottom: 10px solid rgba(0, 0, 0, 0.05);
@@ -110,13 +110,10 @@
 					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 					white-space: nowrap;
 
-					&.empty {
+					&.not_packed {
 						color: $red;
 					}
-					&.semi {
-						color: $yellow;
-					}
-					&.full {
+					&.packed {
 						color: $dark_green;
 					}
 
@@ -148,11 +145,10 @@
 
 		a {
 			display: flex;
-			flex: 1 1 auto;
+			flex: 1 1 50%;
 			flex-flow: column nowrap;
 			height: 80px;
 			justify-content: center;
-			padding-left: 10px;
 
 			@include width(400px) {
 				padding-left: 15px;
@@ -161,11 +157,26 @@
 				padding-left: 20px;
 			}
 
-			&.packing {
-				background-color: $red;
+			&.status {
+
+				&.waiting {
+					background-color: #333;
+				}
+				&.correct {
+					background-color: $dark_green;
+				}
+				&.incorrect {
+					background-color: $red;
+				}
 			}
-			&.packed {
-				background-color: $dark_green;
+			&.confirmation {
+
+				&.packing {
+					background-color: $dark_blue;
+				}
+				&.packed {
+					background-color: $dark_green;
+				}
 			}
 
 			h1 {

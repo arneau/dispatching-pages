@@ -41,14 +41,14 @@
     display: flex;
     flex: 1 1 auto;
     flex-flow: column nowrap;
-    overflow-y: auto; }
+    overflow-y: auto;
+    padding-bottom: 10px; }
     .page .products .product {
       background: #fff;
-      border: 5px solid #fff;
       display: flex;
       flex-flow: row nowrap;
       margin-top: 10px;
-      padding: 5px; }
+      padding: 10px; }
       .page .products .product:last-child {
         border-bottom: 10px solid rgba(0, 0, 0, 0.05); }
       .page .products .product .image {
@@ -81,11 +81,9 @@
         .page .products .product .quantity h3 {
           font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
           white-space: nowrap; }
-          .page .products .product .quantity h3.empty {
+          .page .products .product .quantity h3.not_packed {
             color: #e44; }
-          .page .products .product .quantity h3.semi {
-            color: #fc4; }
-          .page .products .product .quantity h3.full {
+          .page .products .product .quantity h3.packed {
             color: #1a7; }
           .page .products .product .quantity h3 .divider {
             opacity: 0.5; }
@@ -106,20 +104,25 @@
     z-index: 1; }
     .page .footer a {
       display: flex;
-      flex: 1 1 auto;
+      flex: 1 1 50%;
       flex-flow: column nowrap;
       height: 80px;
-      justify-content: center;
-      padding-left: 10px; }
+      justify-content: center; }
       @media (min-width: 400px) {
         .page .footer a {
           padding-left: 15px; } }
       @media (min-width: 800px) {
         .page .footer a {
           padding-left: 20px; } }
-      .page .footer a.packing {
+      .page .footer a.status.waiting {
+        background-color: #333; }
+      .page .footer a.status.correct {
+        background-color: #1a7; }
+      .page .footer a.status.incorrect {
         background-color: #e44; }
-      .page .footer a.packed {
+      .page .footer a.confirmation.packing {
+        background-color: #17b; }
+      .page .footer a.confirmation.packed {
         background-color: #1a7; }
       .page .footer a h1 {
         color: #fff;
