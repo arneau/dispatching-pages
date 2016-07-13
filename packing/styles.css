@@ -1,0 +1,129 @@
+.page {
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .page .header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex: 0 0 80px;
+    flex-flow: row nowrap;
+    z-index: 1; }
+    .page .header a {
+      display: flex;
+      flex: 1 1 33%;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 10px; }
+      @media (min-width: 400px) {
+        .page .header a {
+          padding: 15px; } }
+      @media (min-width: 800px) {
+        .page .header a {
+          padding: 20px; } }
+      .page .header a.batch {
+        background-color: #17b; }
+      .page .header a.order {
+        background-color: #1a7; }
+      .page .header a.courier {
+        background-color: #fc4; }
+      .page .header a h4 {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+      .page .header a h1 {
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+  .page .products {
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    overflow-y: auto; }
+    .page .products .product {
+      background: #fff;
+      border: 5px solid #fff;
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 10px;
+      padding: 5px; }
+      .page .products .product:last-child {
+        border-bottom: 10px solid rgba(0, 0, 0, 0.05); }
+      .page .products .product .image {
+        flex: 0 0 70px;
+        margin-right: 10px; }
+        @media (min-width: 400px) {
+          .page .products .product .image {
+            flex: 0 0 95px; } }
+        .page .products .product .image img {
+          float: left;
+          width: 100%; }
+      .page .products .product .titles {
+        display: flex;
+        flex: 1 1 auto;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-right: 10px; }
+        .page .products .product .titles h4 {
+          color: rgba(0, 0, 0, 0.87);
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+        .page .products .product .titles h5 {
+          color: rgba(0, 0, 0, 0.54);
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          margin-top: 5px; }
+      .page .products .product .quantity {
+        display: flex;
+        flex: 0 1 auto;
+        flex-flow: column nowrap;
+        justify-content: center; }
+        .page .products .product .quantity h3 {
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          white-space: nowrap; }
+          .page .products .product .quantity h3.empty {
+            color: #e44; }
+          .page .products .product .quantity h3.semi {
+            color: #fc4; }
+          .page .products .product .quantity h3.full {
+            color: #1a7; }
+          .page .products .product .quantity h3 .divider {
+            opacity: 0.5; }
+            @media (min-width: 400px) {
+              .page .products .product .quantity h3 .divider {
+                display: none; } }
+          .page .products .product .quantity h3 .of {
+            opacity: 0.5;
+            display: none; }
+            @media (min-width: 400px) {
+              .page .products .product .quantity h3 .of {
+                display: inline-block; } }
+  .page .footer {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex: 0 0 80px;
+    flex-flow: row nowrap;
+    z-index: 1; }
+    .page .footer a {
+      display: flex;
+      flex: 1 1 auto;
+      flex-flow: column nowrap;
+      height: 80px;
+      justify-content: center;
+      padding-left: 10px; }
+      @media (min-width: 400px) {
+        .page .footer a {
+          padding-left: 15px; } }
+      @media (min-width: 800px) {
+        .page .footer a {
+          padding-left: 20px; } }
+      .page .footer a.packing {
+        background-color: #e44; }
+      .page .footer a.packed {
+        background-color: #1a7; }
+      .page .footer a h1 {
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
