@@ -1,0 +1,108 @@
+.page {
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .page .batches {
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+    padding-bottom: 10px; }
+    .page .batches .batch {
+      background: #fff;
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 10px;
+      padding: 10px; }
+      @media (min-width: 600px) {
+        .page .batches .batch {
+          flex-flow: row nowrap; } }
+      .page .batches .batch:last-child {
+        border-bottom: 10px solid rgba(0, 0, 0, 0.05); }
+      .page .batches .batch .details {
+        display: flex;
+        flex: 0 0 70px;
+        flex-flow: row nowrap; }
+        @media (min-width: 600px) {
+          .page .batches .batch .details {
+            flex-flow: column nowrap;
+            padding-right: 10px;
+            margin-right: 10px; } }
+        .page .batches .batch .details .detail {
+          flex: 0 0 50%; }
+          .page .batches .batch .details .detail h4 {
+            color: rgba(0, 0, 0, 0.54);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          .page .batches .batch .details .detail h1 {
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin-bottom: 10px; }
+      .page .batches .batch .products {
+        display: flex;
+        flex: 1 1 auto;
+        flex-flow: column nowrap;
+        overflow-y: auto; }
+        .page .batches .batch .products .product {
+          border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+          display: flex;
+          flex-flow: row nowrap;
+          padding: 10px 0; }
+          .page .batches .batch .products .product:last-child {
+            border-bottom: 0; }
+          .page .batches .batch .products .product .image {
+            flex: 0 0 40px;
+            margin-right: 10px; }
+            .page .batches .batch .products .product .image img {
+              float: left;
+              width: 100%; }
+          .page .batches .batch .products .product .titles {
+            display: flex;
+            flex: 1 1 auto;
+            flex-flow: column nowrap;
+            justify-content: center;
+            margin-right: 10px; }
+            .page .batches .batch .products .product .titles h4 {
+              color: rgba(0, 0, 0, 0.87);
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+            .page .batches .batch .products .product .titles h5 {
+              color: rgba(0, 0, 0, 0.54);
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+              margin-top: 5px; }
+          .page .batches .batch .products .product .quantity {
+            display: flex;
+            flex: 0 1 auto;
+            flex-flow: column nowrap;
+            justify-content: center; }
+            .page .batches .batch .products .product .quantity h3 {
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+              white-space: nowrap; }
+  .page .footer {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex: 0 0 80px;
+    flex-flow: row nowrap;
+    z-index: 1; }
+    .page .footer a {
+      background: #1a7;
+      display: flex;
+      flex: 1 1 auto;
+      flex-flow: column nowrap;
+      height: 80px;
+      justify-content: center; }
+      @media (min-width: 400px) {
+        .page .footer a {
+          padding-left: 15px; } }
+      @media (min-width: 800px) {
+        .page .footer a {
+          padding-left: 20px; } }
+      .page .footer a h1 {
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */

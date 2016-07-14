@@ -1,0 +1,147 @@
+@import 'colours';
+@import 'mixins';
+
+.page {
+	bottom: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	.batches {
+		background: rgba(0, 0, 0, 0.05);
+		display: flex;
+		flex: 1 1 auto;
+		flex-flow: column nowrap;
+		overflow-y: auto;
+		padding-bottom: 10px;
+
+		.batch {
+			background: #fff;
+			display: flex;
+			flex-flow: column nowrap;
+			margin-top: 10px;
+			padding: 10px;
+
+			@include width(600px) {
+				flex-flow: row nowrap;
+			}
+
+			&:last-child {
+				border-bottom: 10px solid rgba(0, 0, 0, 0.05);
+			}
+
+			.details {
+				display: flex;
+				flex: 0 0 70px;
+				flex-flow: row nowrap;
+
+				@include width(600px) {
+					flex-flow: column nowrap;
+					padding-right: 10px;
+					margin-right: 10px;
+				}
+
+				.detail {
+					flex: 0 0 50%;
+
+					h4 {
+						color: rgba(0, 0, 0, 0.54);
+						font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+					}
+					h1 {
+						color: rgba(0, 0, 0, 0.87);
+						font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+						margin-bottom: 10px;
+					}
+				}
+			}
+			.products {
+				display: flex;
+				flex: 1 1 auto;
+				flex-flow: column nowrap;
+				overflow-y: auto;
+
+				.product {
+					border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+					display: flex;
+					flex-flow: row nowrap;
+					padding: 10px 0;
+
+					&:last-child {
+						border-bottom: 0;
+					}
+
+					.image {
+						flex: 0 0 40px;
+						margin-right: 10px;
+
+						img {
+							float: left;
+							width: 100%;
+						}
+					}
+					.titles {
+						display: flex;
+						flex: 1 1 auto;
+						flex-flow: column nowrap;
+						justify-content: center;
+						margin-right: 10px;
+
+						h4 {
+							color: rgba(0, 0, 0, 0.87);
+							font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+						}
+						h5 {
+							color: rgba(0, 0, 0, 0.54);
+							font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+							margin-top: 5px;
+						}
+					}
+					.quantity {
+						display: flex;
+						flex: 0 1 auto;
+						flex-flow: column nowrap;
+						justify-content: center;
+
+						h3 {
+							font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+		display: flex;
+		flex: 0 0 80px;
+		flex-flow: row nowrap;
+		z-index: 1;
+
+		a {
+			background: $dark_green;
+			display: flex;
+			flex: 1 1 auto;
+			flex-flow: column nowrap;
+			height: 80px;
+			justify-content: center;
+
+			@include width(400px) {
+				padding-left: 15px;
+			}
+			@include width(800px) {
+				padding-left: 20px;
+			}
+
+			h1 {
+				color: #fff;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				text-align: center;
+			}
+		}
+	}
+}
