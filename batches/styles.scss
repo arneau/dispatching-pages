@@ -10,6 +10,41 @@
 	right: 0;
 	top: 0;
 
+	.header {
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+		display: flex;
+		flex: 0 0 80px;
+		flex-flow: row nowrap;
+		z-index: 1;
+
+		a {
+			display: flex;
+			flex: 1 1 33%;
+			flex-flow: column nowrap;
+			justify-content: center;
+			padding: 10px;
+
+			@include width(400px) {
+				padding: 15px;
+			}
+			@include width(800px) {
+				padding: 20px;
+			}
+
+			&.batches {
+				background-color: $dark_blue;
+			}
+
+			h4 {
+				color: rgba(255, 255, 255, 0.7);
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+			h1 {
+				color: #fff;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+		}
+	}
 	.batches {
 		background: rgba(0, 0, 0, 0.05);
 		display: flex;
@@ -25,7 +60,7 @@
 			margin-top: 10px;
 			padding: 10px;
 
-			@include width(600px) {
+			@include width(500px) {
 				flex-flow: row nowrap;
 			}
 
@@ -34,25 +69,29 @@
 			}
 
 			.details {
-				display: flex;
 				flex: 0 0 70px;
-				flex-flow: row nowrap;
 
-				@include width(600px) {
+				@include width(500px) {
 					flex-flow: column nowrap;
 					padding-right: 10px;
 					margin-right: 10px;
 				}
 
 				.detail {
-					flex: 0 0 50%;
+					float: left;
+					margin-right: 20px;
+
+					@include width(500px) {
+						margin-right: 0;
+					}
 
 					h4 {
-						color: rgba(0, 0, 0, 0.54);
+						color: $dark_blue;
 						font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+						opacity: 0.5;
 					}
 					h1 {
-						color: rgba(0, 0, 0, 0.87);
+						color: $dark_blue;
 						font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 						margin-bottom: 10px;
 					}
@@ -65,7 +104,7 @@
 				overflow-y: auto;
 
 				.product {
-					border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+					border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 					display: flex;
 					flex-flow: row nowrap;
 					padding: 10px 0;
@@ -112,35 +151,6 @@
 						}
 					}
 				}
-			}
-		}
-	}
-	.footer {
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-		display: flex;
-		flex: 0 0 80px;
-		flex-flow: row nowrap;
-		z-index: 1;
-
-		a {
-			background: $dark_green;
-			display: flex;
-			flex: 1 1 auto;
-			flex-flow: column nowrap;
-			height: 80px;
-			justify-content: center;
-
-			@include width(400px) {
-				padding-left: 15px;
-			}
-			@include width(800px) {
-				padding-left: 20px;
-			}
-
-			h1 {
-				color: #fff;
-				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-				text-align: center;
 			}
 		}
 	}

@@ -6,6 +6,32 @@
   position: absolute;
   right: 0;
   top: 0; }
+  .page .header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex: 0 0 80px;
+    flex-flow: row nowrap;
+    z-index: 1; }
+    .page .header a {
+      display: flex;
+      flex: 1 1 33%;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 10px; }
+      @media (min-width: 400px) {
+        .page .header a {
+          padding: 15px; } }
+      @media (min-width: 800px) {
+        .page .header a {
+          padding: 20px; } }
+      .page .header a.batches {
+        background-color: #17b; }
+      .page .header a h4 {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+      .page .header a h1 {
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
   .page .batches {
     background: rgba(0, 0, 0, 0.05);
     display: flex;
@@ -19,27 +45,30 @@
       flex-flow: column nowrap;
       margin-top: 10px;
       padding: 10px; }
-      @media (min-width: 600px) {
+      @media (min-width: 500px) {
         .page .batches .batch {
           flex-flow: row nowrap; } }
       .page .batches .batch:last-child {
         border-bottom: 10px solid rgba(0, 0, 0, 0.05); }
       .page .batches .batch .details {
-        display: flex;
-        flex: 0 0 70px;
-        flex-flow: row nowrap; }
-        @media (min-width: 600px) {
+        flex: 0 0 70px; }
+        @media (min-width: 500px) {
           .page .batches .batch .details {
             flex-flow: column nowrap;
             padding-right: 10px;
             margin-right: 10px; } }
         .page .batches .batch .details .detail {
-          flex: 0 0 50%; }
+          float: left;
+          margin-right: 20px; }
+          @media (min-width: 500px) {
+            .page .batches .batch .details .detail {
+              margin-right: 0; } }
           .page .batches .batch .details .detail h4 {
-            color: rgba(0, 0, 0, 0.54);
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+            color: #17b;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            opacity: 0.5; }
           .page .batches .batch .details .detail h1 {
-            color: rgba(0, 0, 0, 0.87);
+            color: #17b;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             margin-bottom: 10px; }
       .page .batches .batch .products {
@@ -48,7 +77,7 @@
         flex-flow: column nowrap;
         overflow-y: auto; }
         .page .batches .batch .products .product {
-          border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+          border-bottom: 5px solid rgba(0, 0, 0, 0.05);
           display: flex;
           flex-flow: row nowrap;
           padding: 10px 0; }
@@ -81,28 +110,5 @@
             .page .batches .batch .products .product .quantity h3 {
               font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
               white-space: nowrap; }
-  .page .footer {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex: 0 0 80px;
-    flex-flow: row nowrap;
-    z-index: 1; }
-    .page .footer a {
-      background: #1a7;
-      display: flex;
-      flex: 1 1 auto;
-      flex-flow: column nowrap;
-      height: 80px;
-      justify-content: center; }
-      @media (min-width: 400px) {
-        .page .footer a {
-          padding-left: 15px; } }
-      @media (min-width: 800px) {
-        .page .footer a {
-          padding-left: 20px; } }
-      .page .footer a h1 {
-        color: #fff;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
