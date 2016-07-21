@@ -51,58 +51,61 @@
 		flex: 1 1 auto;
 		flex-flow: column nowrap;
 		overflow-y: auto;
+		padding-bottom: 20px;
 
 		.batch {
 			display: flex;
 			flex-flow: column nowrap;
-			margin-top: 40px;
+			margin-top: 20px;
+			padding: 0 10px;
 
-			&:first-child {
-				margin-top: 10px;
-			}
-			&:last-child {
-				border-bottom: 10px solid rgba(0, 0, 0, 0.05);
+			@include width(500px) {
+				flex-flow: row nowrap;
 			}
 
-			.batch_number {
-				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-				margin-bottom: 2px;
+			.details {
+				flex: 0 0 90px;
 
-				span {
-					background-color: #333;
-					color: #fff;
-					float: left;
-					padding: 5px 10px;
+				@include width(500px) {
+					flex-flow: column nowrap;
+					padding-right: 10px;
 				}
-			}
-			.batch_orders {
-				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-				span {
-					background-color: #333;
-					color: #fff;
-					float: left;
-					padding: 5px 10px;
+				h1 {
+					color: rgba(0, 0, 0, 0.87);
+					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				}
+				h4 {
+					color: rgba(0, 0, 0, 0.87);
+					font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+					margin-bottom: 10px;
+
+					&:last-child {
+						color: rgba(0, 0, 0, 0.38);
+					}
 				}
 			}
 			.products {
+				background: #fff;
 				display: flex;
+				flex: 1 1 auto;
 				flex-flow: column nowrap;
+				overflow-y: auto;
+				padding: 0 10px;
 
 				.product {
-					background: #fff;
+					border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 					display: flex;
 					flex-flow: row nowrap;
-					margin-top: 10px;
-					padding: 10px;
+					padding: 10px 0;
+
+					&:last-child {
+						border-bottom: 0;
+					}
 
 					.image {
-						flex: 0 0 70px;
+						flex: 0 0 40px;
 						margin-right: 10px;
-
-						@include width(400px) {
-							flex: 0 0 95px;
-						}
 
 						img {
 							float: left;
@@ -138,7 +141,6 @@
 						justify-content: center;
 
 						h3 {
-							color: rgba(0, 0, 0, 0.87);
 							font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 							white-space: nowrap;
 						}

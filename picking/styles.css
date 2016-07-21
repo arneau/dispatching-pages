@@ -66,6 +66,10 @@
           color: rgba(0, 0, 0, 0.87);
           font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
         .page .products .product .titles h5 {
+          color: #17b;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          margin-top: 5px; }
+        .page .products .product .titles h6 {
           color: rgba(0, 0, 0, 0.54);
           font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
           margin-top: 5px; }
